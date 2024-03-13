@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  background-color: #ffffff;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b6b1b1;
+}
+
+.myntra_home {
+  height: 45px;
+}
+
+.logo_container {
+  margin-left: 4%;
+}
+
+.logo_container img {
+  width: 100%;
+}
+
+.nav_bar {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4rem;
+  overflow-x: hidden; 
+  margin-right: 20%;
+  
+}
+
+.nav_bar a {
+  font-size: 14px;
+  letter-spacing: .3px;
+  color: #282c3f;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 25px 0;
+  border-bottom: 5px solid #ffffff;
+}
+
+.nav_bar a:hover {
+  border-bottom: 4px solid #f54e77;
+}
+
+.nav_bar a sup {
+  color: #ff3f6c;
+  font-size: 10px;
+}
+
+
+.nav_bar .icon {
+  display: none;
+}
+
+.nav_bar .icon i {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  font-size: 24px; /* Adjust as needed */
+  color: #282c3f; /* Adjust as needed */
+}
+
+@media screen and (max-width: 600px) {
+  .nav_bar {
+    display: none; /* Hide the nav_bar by default */
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .nav_bar.responsive {
+    display: flex; 
+  }
+
+  .nav_bar a {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border-bottom: none;
+  }
+
+  .nav_bar a.icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 20px;
+  }
+}
+
+
+
+
+
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.service {
+  flex: 1 1  300px; 
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service h2 {
+  color: #333;
+}
+
+.service p {
+  color: #666;
+}
+
+#btn1 {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#btn1:hover {
+  background-color: #0056b3;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .service {
+    flex-basis: calc(50% - 20px); /* Two services per row */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service {
+    flex-basis: calc(100% - 20px); /* One service per row */
+  }
+}
+
+
+
+/* Footer Css */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-disclaimer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-disclaimer p {
+  margin: 5px 0;
+}
+
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.service-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+
+.service-card h3 {
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.know-more-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.know-more-btn:hover {
+  background-color: #0056b3;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 20px;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+
+/* Service paid */
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section {
+  flex: 1 0 30%;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+h2{
+  margin-left: 8%;
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex: 1 0 100%;
+  }
+}
+
+
+/* Our Service */
+/* Common styles for all screen sizes */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Three columns with a minimum width of 300px */
+  grid-gap: 20px;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.know-more-btn a{
+  color: white;
+  cursor: pointer;
+}
+
+.our-service {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9; /* Background color */
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.our-service:hover {
+  background-color: #eaeaea; /* Change background color on hover */
+}
+
+.our-service img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.our-service h3 {
+  margin-bottom: 5px;
+}
+
+.our-service p {
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* Slider */
+
